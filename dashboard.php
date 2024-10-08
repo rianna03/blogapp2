@@ -26,7 +26,7 @@ if(!isset($_SESSION{'username'})) {
             color: #333;
         }
         .sidebar a:hover {
-            color: #007bff;
+            color: #007bff; 
         }
     </style>
 </head>
