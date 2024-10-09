@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
@@ -38,12 +41,15 @@ if (!isset($_SESSION['username'])) {
     <div class="d-flex">
         <nav class="sidebar bg-light p-3">
             <h2>Admin Dashboard</h2>
-            <ul class="nav flex-column">-
+            <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="admincontact.php"><i class="fas fa-blog"></i> Contact messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="adminabout.php"><i class="fas fa-blog"></i> About us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="posts.php"><i class="fas fa-blog"></i> Posts</a>
@@ -64,8 +70,7 @@ if (!isset($_SESSION['username'])) {
         </nav>
 
         <!-- content -->
-         <?php echo $content?>
-
+        <?php echo $content; ?>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
