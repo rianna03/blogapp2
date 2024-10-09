@@ -40,7 +40,7 @@
                     <li class="colorlib-active"><a href="index.php">Home</a></li>
                     <li><a href="fashion.html">Fashion</a></li>
                     <li><a href="travel.html">Travel</a></li>
-                    <li><a href="about.php">About</a></li>```
+                    <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="register.php">Register</a></li>
                     <li><a href="login.php">Login</a></li>
